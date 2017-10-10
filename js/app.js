@@ -15,6 +15,9 @@
     strony.style.display = "none";
     });
      
+     // zadanie 2
+     
+     
      
   
  
