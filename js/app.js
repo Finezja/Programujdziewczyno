@@ -34,7 +34,15 @@
      for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', showHide);
     }
- 
+     
+     //zadanie 3
+     
+     var menu = document.querySelector('.navbar-fixed-top');
+     
+     window.addEventListener('scroll', function() {
+       menu.style.borderBottom="1px solid #7f7f7f";   
+     });
+
 
  
  
