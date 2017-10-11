@@ -109,6 +109,19 @@ nav {
   box-shadow: .2rem .2rem .2rem #7f7f7f;
 }
 
+.button-up {
+  background-color: #fff;
+  padding: 1.5rem 3rem;
+  color: #0e3655;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin-top: 5rem;
+  border: solid  #ea6c56;
+  box-shadow: .5rem .5rem .5srem #7f7f7f;
+    
+}
 .tasks-btn:hover,
 .tasks-btn:visited,
 .tasks-btn:active {

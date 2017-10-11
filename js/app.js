@@ -42,6 +42,14 @@
      window.addEventListener('scroll', function() {
        menu.style.borderBottom="1px solid #7f7f7f";   
      });
+     
+     // zadanie 4
+     
+     var button = document.querySelector('.button-up');
+     
+     button.addEventListener('click', function() {
+         window.scroll(0,0);
+     })
 
 
  
