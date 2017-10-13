@@ -51,7 +51,12 @@
          window.scroll(0,0);
      })
 
-
+     // zadanie 5
+     
+     var items = document.querySelectorAll('.org');
+     var dots = document.querySelectorAll('.dot');
+     
+     dots[0].addEventListener('click');
  
  
  

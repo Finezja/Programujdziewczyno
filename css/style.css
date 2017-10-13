@@ -315,6 +315,14 @@ nav {
     display: none;
 }
 
+.slider {
+    display: block;
+}
+
+.visible {
+    display: inline-block;
+}
+
 footer {
   margin-top: 4rem;
   background-color: #44ca85;
