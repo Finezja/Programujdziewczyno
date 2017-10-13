@@ -315,11 +315,11 @@ nav {
     display: none;
 }
 
-.slider {
-    display: block;
+.slider li {
+    display: none;
 }
 
-.visible {
+.slider .visible {
     display: inline-block;
 }
 
