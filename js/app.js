@@ -87,6 +87,21 @@
     items[2].classList.add('visible');
   });
      
+     // zadanie 6
+     
+     var przycisk = document.querySelector('.add-task-btn');
+     var listaZadan = document.querySelectorAll('.list-container');
+     var trescZadania = document.querySelectorAll('.list-group'); 
+     
+     function addTask() {
+         tasksList.appendChild(newTask);
+         input.value('');
+     };
+     
+     przycisk.addEventListener('click', addToList);
+     
+     var newTask = document.createElement('li');
+     console.log(input.value);
  
  
  
