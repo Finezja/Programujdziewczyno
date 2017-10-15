@@ -89,23 +89,18 @@
      
      // zadanie 6
      
-     var przycisk = document.querySelector('.add-task-btn');
-     var listaZadan = document.querySelectorAll('.list-container');
-     var trescZadania = document.querySelectorAll('.list-group'); 
+     var addTaskBtn = document.querySelector('.add-task-btn');
+     var tasksList = document.querySelector('.list');
+     var trescZadania = document.querySelector('input'); 
      
      function addTask() {
-         tasksList.appendChild(newTask);
-         input.value('');
+       var newTask = document.createElement('li');
+       newTask.innerHTML = input.value;
+       tasksList.appendChild(newTask);
+       input.value = '';
      };
-     
-     przycisk.addEventListener('click', addToList);
-     
-     var newTask = document.createElement('li');
-     console.log(input.value);
  
- 
- 
- 
+     addTaskBtn.addEventListener('click', addTask);
  
  
  
