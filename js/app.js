@@ -90,21 +90,20 @@
      // zadanie 6
      //dodawnie zadania do listy
      
-     var addTaskBtn = document.querySelector('.add-task-btn');
-     var tasksList = document.querySelector('.list');
-     var input = document.querySelector('input'); 
-     
-     function addTask() {
-       var newTask = document.createElement('li');
-       newTask.innerHTML = input.value;
-       tasksList.appendChild(newTask);
-       input.value = '';  
-     }
-     addTaskBtn.addEventListener('click', addTask);
+  var addTaskBtn = document.querySelector('.add-task-btn');
+  var tasksList = document.querySelector('.list');
+  var input = document.querySelector('input');
  
-     // dodawanie zadania z mozliwosci usuniecia
+  function addTask() {
+    var newTask = document.createElement('li');
+    newTask.innerHTML = input.value;
+    tasksList.appendChild(newTask);
+    input.value = '';
+  }
+
+  // przycisk Delete
      
-    function addTaskWithDelBtn() {
+  function addTaskWithDelBtn() {
     var newTask = document.createElement('li');
     var taskValue = document.createElement('div');
     var deleteBtn = document.createElement('button');
@@ -121,6 +120,26 @@
       this.parentElement.parentNode.removeChild(this.parentElement);
     });
   }
-    
+
+  // przycisk Gotowe
+     
+  function addTaskWithDoneBtn() {
+    var newTask = document.createElement('li');
+    var taskValue = document.createElement('div');
+    var doneBtn = document.createElement('button');
+
+    taskValue.innerHTML = input.value;
+    doneBtn.innerHTML = 'Gotowe!'
+    doneBtn.classList.add('done-btn', 'btn');
+    tasksList.appendChild(newTask);
+    newTask.appendChild(taskValue);
+    newTask.appendChild(doneBtn);
+    input.value = '';
+
+    doneBtn.addEventListener('click', function() {
+      this.previousElementSibling.style.textDecoration = 'line-through';
+    })    
+  }
  
+       addTaskBtn.addEventListener('click', addTask);
  }); // to musi być! odwołuje się do samego początku!

@@ -323,6 +323,14 @@ nav {
     display: inline-block;
 }
 
+.delete-btn, 
+.done-btn {
+  border-radius: 1rem;
+  padding: .5rem;
+  margin-top: .5rem;
+  font-size: 1.5rem;
+}
+
 footer {
   margin-top: 4rem;
   background-color: #44ca85;
@@ -333,17 +341,4 @@ footer p {
   font-size: 1.2rem;
   color: #424343;
   margin-top: 3rem;
-}
-
-.delete-btn{
-  background-color: #fff;
-  padding: 1,5 rem 3 rem;
-  color: #0e3655;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  text-decoration: none;
-  margin-top: 3rem;
-  border: none;
-  box-shadow: .2rem .2rem .2rem #7f7f7f; 
 }
