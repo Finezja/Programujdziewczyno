@@ -88,24 +88,39 @@
   });
      
      // zadanie 6
+     //dodawnie zadania do listy
      
      var addTaskBtn = document.querySelector('.add-task-btn');
      var tasksList = document.querySelector('.list');
-     var trescZadania = document.querySelector('input'); 
+     var input = document.querySelector('input'); 
      
      function addTask() {
        var newTask = document.createElement('li');
        newTask.innerHTML = input.value;
        tasksList.appendChild(newTask);
-       input.value = '';
-     };
- 
+       input.value = '';  
+     }
      addTaskBtn.addEventListener('click', addTask);
  
- 
- 
- 
- 
- 
+     // dodawanie zadania z mozliwosci usuniecia
+     
+    function addTaskWithDelBtn() {
+    var newTask = document.createElement('li');
+    var taskValue = document.createElement('div');
+    var deleteBtn = document.createElement('button');
+
+    taskValue.innerHTML = input.value;
+    deleteBtn.innerHTML = 'Usuń';
+    deleteBtn.classList.add('delete-btn', 'btn');
+    tasksList.appendChild(newTask);
+    newTask.appendChild(taskValue);
+    newTask.appendChild(deleteBtn);
+    input.value = '';
+
+    deleteBtn.addEventListener('click', function() {
+      this.parentElement.parentNode.removeChild(this.parentElement);
+    });
+  }
+    
  
  }); // to musi być! odwołuje się do samego początku!
